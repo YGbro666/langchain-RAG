@@ -1,0 +1,73 @@
+2025-03-07 10:34:53,156 - __mp_main__ - INFO - 历史记录文件路径: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:34:53,156 - __mp_main__ - INFO - 成功加载现有历史记录文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:34:53,215 - langchain_demo - INFO - 历史记录文件路径: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:34:53,216 - langchain_demo - INFO - 成功加载现有历史记录文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:35:29,550 - __mp_main__ - INFO - 历史记录文件路径: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:35:29,550 - __mp_main__ - INFO - 成功加载现有历史记录文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:35:29,602 - langchain_demo - INFO - 历史记录文件路径: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:35:29,602 - langchain_demo - INFO - 成功加载现有历史记录文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:35:45,194 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-03-07 10:35:46,265 - faiss.loader - INFO - Loading faiss with AVX512-SPR support.
+2025-03-07 10:35:46,265 - faiss.loader - INFO - Could not load library with AVX512-SPR support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512_spr'")
+2025-03-07 10:35:46,265 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-03-07 10:35:46,281 - faiss.loader - INFO - Successfully loaded faiss with AVX512 support.
+2025-03-07 10:35:46,286 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-03-07 10:35:52,219 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-03-07 10:35:53,351 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-03-07 10:35:54,568 - langchain_demo - INFO - 正在添加新的聊天记录到文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:35:54,569 - langchain_demo - INFO - 成功保存聊天记录
+2025-03-07 10:35:54,572 - langchain_demo - INFO - 正在添加新的聊天记录到文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:35:54,572 - langchain_demo - INFO - 成功保存聊天记录
+2025-03-07 10:41:37,500 - __mp_main__ - INFO - 历史记录文件路径: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:41:37,500 - __mp_main__ - INFO - 成功加载现有历史记录文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:41:37,553 - langchain_demo - INFO - 历史记录文件路径: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:41:37,553 - langchain_demo - INFO - 成功加载现有历史记录文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:41:53,443 - __mp_main__ - INFO - 历史记录文件路径: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:41:53,443 - __mp_main__ - INFO - 成功加载现有历史记录文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:41:53,496 - langchain_demo - INFO - 历史记录文件路径: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:41:53,496 - langchain_demo - INFO - 成功加载现有历史记录文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:42:22,798 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-03-07 10:42:23,921 - faiss.loader - INFO - Loading faiss with AVX512-SPR support.
+2025-03-07 10:42:23,921 - faiss.loader - INFO - Could not load library with AVX512-SPR support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512_spr'")
+2025-03-07 10:42:23,921 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-03-07 10:42:23,936 - faiss.loader - INFO - Successfully loaded faiss with AVX512 support.
+2025-03-07 10:42:23,939 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-03-07 10:42:29,795 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-03-07 10:42:31,076 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-03-07 10:42:32,636 - langchain_demo - INFO - 正在添加新的聊天记录到文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:42:32,637 - langchain_demo - INFO - 成功保存聊天记录
+2025-03-07 10:42:32,640 - langchain_demo - INFO - 正在添加新的聊天记录到文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:42:32,640 - langchain_demo - INFO - 成功保存聊天记录
+2025-03-07 10:42:48,409 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-03-07 10:42:49,738 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-03-07 10:42:51,309 - langchain_demo - INFO - 正在添加新的聊天记录到文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:42:51,310 - langchain_demo - INFO - 成功保存聊天记录
+2025-03-07 10:42:51,312 - langchain_demo - INFO - 正在添加新的聊天记录到文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:42:51,312 - langchain_demo - INFO - 成功保存聊天记录
+2025-03-07 10:44:55,799 - __mp_main__ - INFO - 历史记录文件路径: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:44:55,799 - __mp_main__ - INFO - 成功加载现有历史记录文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:44:55,858 - langchain_demo - INFO - 历史记录文件路径: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:44:55,859 - langchain_demo - INFO - 成功加载现有历史记录文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:45:55,977 - __mp_main__ - INFO - 历史记录文件路径: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:45:55,977 - __mp_main__ - INFO - 成功加载现有历史记录文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:45:56,027 - langchain_demo - INFO - 历史记录文件路径: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:45:56,027 - langchain_demo - INFO - 成功加载现有历史记录文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:47:19,184 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-03-07 10:47:23,224 - langchain_demo - INFO - 正在添加新的聊天记录到文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:47:23,224 - langchain_demo - INFO - 成功保存聊天记录
+2025-03-07 10:47:47,684 - __mp_main__ - INFO - 历史记录文件路径: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:47:47,684 - __mp_main__ - INFO - 成功加载现有历史记录文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:47:47,734 - langchain_demo - INFO - 历史记录文件路径: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:47:47,735 - langchain_demo - INFO - 成功加载现有历史记录文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:49:12,444 - __mp_main__ - INFO - 历史记录文件路径: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:49:12,444 - __mp_main__ - INFO - 成功加载现有历史记录文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:49:12,496 - langchain_demo - INFO - 历史记录文件路径: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:49:12,496 - langchain_demo - INFO - 成功加载现有历史记录文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:49:25,449 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-03-07 10:49:29,386 - langchain_demo - INFO - 正在添加新的聊天记录到文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:49:29,386 - langchain_demo - INFO - 成功保存聊天记录
+2025-03-07 10:50:37,513 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-03-07 10:50:39,401 - langchain_demo - INFO - 正在添加新的聊天记录到文件: /root/autodl-tmp/yuguo-24/bottom/langchain-RAG/chat_history.json
+2025-03-07 10:50:39,402 - langchain_demo - INFO - 成功保存聊天记录

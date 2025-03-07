@@ -1,4 +1,6 @@
 import requests
+import json
+from datetime import datetime
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 import uvicorn
@@ -17,10 +19,19 @@ from langchain_ollama import OllamaLLM
 from langchain_core.documents import Document
 from langchain_community.document_loaders.helpers import detect_file_encodings
 import logging
+import sys
 
+# 配置日志记录
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.StreamHandler(sys.stdout),
+        logging.FileHandler("app.log", encoding="utf-8"),
+    ],
+)
 
 logger = logging.getLogger(__name__)
-
 
 embedding_dimension = 768
 
@@ -117,6 +128,80 @@ class ChatResponse(BaseModel):
     response: str
 
 
+class ChatHistory(BaseModel):
+    timestamp: str
+    prompt: str
+    response: str
+    status: str
+
+
+class ChatHistoryManager:
+    def __init__(self, history_file: str = "chat_history.json"):
+        # 使用绝对路径
+        self.history_file = os.path.abspath(history_file)
+        logger.info(f"历史记录文件路径: {self.history_file}")
+        self._ensure_history_file()
+
+    def _ensure_history_file(self):
+        try:
+            if not os.path.exists(self.history_file):
+                logger.info(f"创建新的历史记录文件: {self.history_file}")
+                with open(self.history_file, "w", encoding="utf-8") as f:
+                    json.dump([], f, ensure_ascii=False, indent=2)
+            else:
+                with open(self.history_file, "r", encoding="utf-8") as f:
+                    json.load(f)
+                logger.info(f"成功加载现有历史记录文件: {self.history_file}")
+        except Exception as e:
+            logger.error(f"初始化历史记录文件时发生错误: {str(e)}")
+            # 如果出错，尝试重新创建文件
+            with open(self.history_file, "w", encoding="utf-8") as f:
+                json.dump([], f, ensure_ascii=False, indent=2)
+
+    def add_chat(self, prompt: str, response: str, status: str):
+        try:
+            logger.info(f"正在添加新的聊天记录到文件: {self.history_file}")
+            # 读取现有历史记录
+            history = []
+            if os.path.exists(self.history_file):
+                with open(self.history_file, "r", encoding="utf-8") as f:
+                    history = json.load(f)
+
+            # 添加新的对话记录
+            chat_entry = ChatHistory(
+                timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                prompt=prompt,
+                response=response,
+                status=status,
+            ).dict()
+
+            history.append(chat_entry)
+
+            # 写入更新后的历史记录
+            with open(self.history_file, "w", encoding="utf-8") as f:
+                json.dump(history, f, ensure_ascii=False, indent=2)
+            logger.info("成功保存聊天记录")
+
+        except Exception as e:
+            logger.error(f"保存聊天历史时发生错误: {str(e)}")
+            raise
+
+    def get_history(self, limit: Optional[int] = None) -> List[ChatHistory]:
+        try:
+            with open(self.history_file, "r", encoding="utf-8") as f:
+                history = json.load(f)
+            if limit:
+                history = history[-limit:]
+            return [ChatHistory(**entry) for entry in history]
+        except Exception as e:
+            logger.error(f"读取聊天历史时发生错误: {str(e)}")
+            return []
+
+
+# 创建聊天历史管理器实例
+chat_history_manager = ChatHistoryManager()
+
+
 class EmbeddingRequest(BaseModel):
     source_sentence: List[str]
     sentences_to_compare: List[str]
@@ -125,7 +210,6 @@ class EmbeddingRequest(BaseModel):
 class EmbeddingResponse(BaseModel):
     text_embedding: List[List[float]]
     scores: List[float]
-
 
 
 @app.post("/RAGchat", response_model=ChatResponse)
@@ -168,10 +252,20 @@ def RAGchat(request: ChatRequest):
         for i, doc in enumerate(source_docs, 1):
             response += f"{i}. {doc.metadata.get('source', '未知来源')}\n"
 
+        # 保存聊天历史
+        chat_history_manager.add_chat(
+            prompt=request.prompt, response=response, status="success"
+        )
+
         return ChatResponse(status="success", response=response)
 
     except Exception as e:
-        return ChatResponse(status="error", response=f"处理请求时发生错误: {str(e)}")
+        error_response = f"处理请求时发生错误: {str(e)}"
+        # 保存错误记录到聊天历史
+        chat_history_manager.add_chat(
+            prompt=request.prompt, response=error_response, status="error"
+        )
+        return ChatResponse(status="error", response=error_response)
 
 
 @app.post("/RAG_write_index", response_model=ChatResponse)
@@ -191,6 +285,8 @@ def RAG_write_index():
         return ChatResponse(status="success", response="索引写入成功")
     except Exception as e:
         return ChatResponse(status="error", response=f"处理请求时发生错误: {str(e)}")
+
+
 # class Agentic_RAG_Tool(BaseTool):
 #     name:str = "Agentic_RAG_Tool"
 #     description:str = "必须使用一次此工具。输入应该是具体的问题或查询关键词。"
@@ -217,28 +313,79 @@ class RAGchat_tool_input(BaseModel):
     question: str = Field(description="需要回答的问题或查询关键词")
 
 
+def format_chat_history(history: List[ChatHistory], max_history: int = 5) -> str:
+    """格式化最近的聊天历史记录"""
+    if not history:
+        return ""
+
+    # 只取最近的几条记录
+    recent_history = history[-max_history:]
+    formatted_history = "以下是最近的对话历史：\n\n"
+
+    for entry in recent_history:
+        formatted_history += f"用户: {entry.prompt}\n"
+        formatted_history += f"助手: {entry.response}\n\n"
+
+    return formatted_history
+
+
 @app.post("/agent", response_model=ChatResponse)
 def agent(request: ChatRequest):
-    llm = OllamaLLM(model="qwen2.5:14b", base_url=Ollama_URL)
-    Agentic_RAG_Tool = Tool.from_function(
-        name="Agentic_RAG_Tool",
-        description="用于查询知识库的工具。注意：必须先使用Index_Creater_Tool创建索引后才能使用此工具！如果索引不存在将会报错。输入应该是具体的问题或查询关键词。",
-        func=RAGchat_tool,
-        return_direct=True,
-        args_schema=RAGchat_tool_input,
-    )
-    Index_Creater_Tool = Tool.from_function(
-        name="Index_Creater_Tool",
-        description="创建知识库索引的工具。在进行任何对于知识库的查询之前，必须首先调用此工具来创建索引。这是第一步！该工具不需要任何输入,只需要调用即可。",
-        func=RAG_write_index_wrapper,
-        return_direct=False,
-    )
-    tools = [Agentic_RAG_Tool, Index_Creater_Tool]
-    agent = initialize_agent(
-        llm=llm, tools=tools, handle_parsing_errors=True, verbose=True
-    )
-    result = agent.run(request.prompt)  # 返回字符串
-    return ChatResponse(status="success", response=result)
+    try:
+        # 获取历史记录
+        history = chat_history_manager.get_history(limit=5)  # 获取最近5条记录
+        chat_history = format_chat_history(history)
+
+        # 构建带有历史记录的提示
+        prompt_with_history = f"""请基于以下历史对话记录和当前问题进行回答。注意保持对话的连贯性和上下文的相关性。
+
+{chat_history}
+当前问题: {request.prompt}
+"""
+
+        llm = OllamaLLM(model="qwen2.5:14b", base_url=Ollama_URL)
+        Agentic_RAG_Tool = Tool.from_function(
+            name="Agentic_RAG_Tool",
+            description="用于查询知识库的工具。注意：必须先使用Index_Creater_Tool创建索引后才能使用此工具！如果索引不存在将会报错。输入应该是具体的问题或查询关键词。",
+            func=RAGchat_tool,
+            return_direct=True,
+            args_schema=RAGchat_tool_input,
+        )
+        Index_Creater_Tool = Tool.from_function(
+            name="Index_Creater_Tool",
+            description="创建知识库索引的工具。在进行任何对于知识库的查询之前，必须首先调用此工具来创建索引。这是第一步！该工具不需要任何输入,只需要调用即可。",
+            func=RAG_write_index_wrapper,
+            return_direct=False,
+        )
+        tools = [Agentic_RAG_Tool, Index_Creater_Tool]
+        agent = initialize_agent(
+            llm=llm, tools=tools, handle_parsing_errors=True, verbose=True
+        )
+        result = agent.run(prompt_with_history)  # 使用带有历史记录的提示
+
+        # 保存聊天历史
+        chat_history_manager.add_chat(
+            prompt=request.prompt, response=result, status="success"
+        )
+
+        return ChatResponse(status="success", response=result)
+    except Exception as e:
+        error_response = f"处理请求时发生错误: {str(e)}"
+        # 保存错误记录到聊天历史
+        chat_history_manager.add_chat(
+            prompt=request.prompt, response=error_response, status="error"
+        )
+        return ChatResponse(status="error", response=error_response)
+
+
+# 添加新的历史记录查询端点
+@app.get("/chat_history")
+def get_chat_history(limit: Optional[int] = None):
+    try:
+        history = chat_history_manager.get_history(limit)
+        return {"status": "success", "history": [entry.dict() for entry in history]}
+    except Exception as e:
+        return {"status": "error", "message": f"获取聊天历史时发生错误: {str(e)}"}
 
 
 if __name__ == "__main__":

@@ -1,56 +1,68 @@
 [
   {
-    "timestamp": "2025-03-07 10:35:54",
-    "prompt": "贾母是谁",
-    "response": "根据上下文的描述，贾母是《红楼梦》中的一个重要人物，她是贾府的长辈和家族的实际掌权者。文中提到的内容显示她对家庭成员有着深厚的影响，并且在生病时家里的人都非常关心她的健康。因此，贾母指的是贾政的母亲，也是宝玉、探春等人的祖母。\n\n参考文档：\n1. my_index/input/hongloumeng/《红楼梦》 第一百六回 王熙凤致祸抱羞惭　贾太君祷天消祸患.txt\n2. my_index/input/hongloumeng/《红楼梦》 第八十二回 老学究讲义警顽心　病潇湘痴魂惊恶梦.txt\n3. my_index/input/hongloumeng/《红楼梦》 第五十四回 史太君破陈腐旧套　王熙凤效戏彩斑衣.txt\n4. my_index/input/hongloumeng/《红楼梦》 第四十三回 闲取乐偶攒金庆寿　不了情暂撮土为香.txt\n",
+    "timestamp": "2025-03-11 16:39:54",
+    "prompt": "{\r\n    \"prompt\": \"你是云端的LLM还是我本地部署的LLM？你还记得我们上次谈话的内容吗？\"\r\n}",
+    "response": "我是Qwen，一个由阿里巴巴云开发的云端大型语言模型（LLM）。这意味着我的运行是在阿里云服务器上进行的，而不是在您的本地设备上部署的。由于隐私保护的原因，我不会保存与特定用户的聊天记录或个人信息，因此无法回忆起我们之前的交谈细节。如果您有任何新的问题或者希望继续讨论某个话题，请随时告诉我！",
     "status": "success"
   },
   {
-    "timestamp": "2025-03-07 10:35:54",
+    "timestamp": "2025-03-11 16:48:12",
+    "prompt": "贾母",
+    "response": "贾母是《红楼梦》中的重要人物之一，她是贾家的长辈，对家族事务有着重要的影响力。从您给出的几个章节标题来看，贾母不仅在处理家族内部事务时表现出明智和大义（如第一百七回“散馀资贾母明大义”所示），同时也非常关心家族成员的生活与情感需求，例如第三回提到的她对接收孤女林黛玉进府的态度，显示出其慈祥与同情的一面。但请注意，这些信息只是根据提供的章节标题推测而来，并不能涵盖贾母这一角色的所有特质或故事中她的全部经历。如果想了解更多关于贾母的信息，建议直接阅读原著相关章节。\n\n参考文档：\n1. my_index/input/hongloumeng/《红楼梦》 第一百七回 散馀资贾母明大义　复世职政老沐天恩.txt\n2. my_index/input/hongloumeng/《红楼梦》 第二回 贾夫人仙逝扬州城　冷子兴演说荣国府.txt\n3. my_index/input/hongloumeng/《红楼梦》 第三回 托内兄如海荐西宾　接外孙贾母惜孤女.txt\n4. my_index/input/hongloumeng/《红楼梦》 第九十二回 评女传巧姐慕贤良　玩母珠贾政参聚散.txt\n",
+    "status": "success"
+  },
+  {
+    "timestamp": "2025-03-11 16:48:12",
+    "prompt": "{\r\n    \"prompt\": \"贾母是谁？你还记得我们上次谈话的内容吗？\"\r\n}",
+    "response": "处理请求时发生错误: 'intermediate_steps'",
+    "status": "error"
+  },
+  {
+    "timestamp": "2025-03-11 16:49:39",
     "prompt": "贾母是谁？",
-    "response": "根据上下文的描述，贾母是《红楼梦》中的一个重要人物，她是贾府的长辈和家族的实际掌权者。文中提到的内容显示她对家庭成员有着深厚的影响，并且在生病时家里的人都非常关心她的健康。因此，贾母指的是贾政的母亲，也是宝玉、探春等人的祖母。\n\n参考文档：\n1. my_index/input/hongloumeng/《红楼梦》 第一百六回 王熙凤致祸抱羞惭　贾太君祷天消祸患.txt\n2. my_index/input/hongloumeng/《红楼梦》 第八十二回 老学究讲义警顽心　病潇湘痴魂惊恶梦.txt\n3. my_index/input/hongloumeng/《红楼梦》 第五十四回 史太君破陈腐旧套　王熙凤效戏彩斑衣.txt\n4. my_index/input/hongloumeng/《红楼梦》 第四十三回 闲取乐偶攒金庆寿　不了情暂撮土为香.txt\n",
+    "response": "贾母是《红楼梦》中的一个重要人物，她是贾家的家族长辈，也是贾宝玉的祖母。在提供的文段中，当她听说家族遇到麻烦时，表现得非常伤心和担忧。她的角色通常与智慧、慈爱和权威联系在一起。\n\n参考文档：\n1. my_index/input/hongloumeng/《红楼梦》 第一百七回 散馀资贾母明大义　复世职政老沐天恩.txt\n2. my_index/input/hongloumeng/《红楼梦》 第一百六回 王熙凤致祸抱羞惭　贾太君祷天消祸患.txt\n3. my_index/input/hongloumeng/《红楼梦》 第二回 贾夫人仙逝扬州城　冷子兴演说荣国府.txt\n4. my_index/input/hongloumeng/《红楼梦》 第九十二回 评女传巧姐慕贤良　玩母珠贾政参聚散.txt\n",
     "status": "success"
   },
   {
-    "timestamp": "2025-03-07 10:42:32",
-    "prompt": "林黛玉是谁？",
-    "response": "林黛玉是《红楼梦》中的一个重要人物，她是以作者虚构的贾、史、王、薛四大家族之一——林家的女儿身份出现。在故事中，她是贾母去世多年的独生女贾敏与前宰相林如海之女，因此她的文学才华出众，情感细腻且具有极高的艺术造诣，在小说中以诗文才情著称，并和男主角贾宝玉有着复杂的情感关系。\n\n参考文档：\n1. my_index/input/hongloumeng/《红楼梦》 第十八回 皇恩重元妃省父母　天伦乐宝玉呈才藻.txt\n2. my_index/input/hongloumeng/《红楼梦》 第十九回 情切切良宵花解语　意绵绵静日玉生香.txt\n3. my_index/input/hongloumeng/《红楼梦》 第八十二回 老学究讲义警顽心　病潇湘痴魂惊恶梦.txt\n4. my_index/input/hongloumeng/《红楼梦》 第七十九回 薛文起悔娶河东吼　贾迎春误嫁中山狼.txt\n",
+    "timestamp": "2025-03-11 16:49:40",
+    "prompt": "{\r\n    \"prompt\": \"贾母是谁？你还记得我们上次谈话的内容吗？\"\r\n}",
+    "response": "处理请求时发生错误: get_num_tokens_from_messages() is not presently implemented for model cl100k_base. See https://platform.openai.com/docs/guides/text-generation/managing-tokens for information on how messages are converted to tokens.",
+    "status": "error"
+  },
+  {
+    "timestamp": "2025-03-11 16:51:04",
+    "prompt": "贾母是谁？",
+    "response": "贾母是《红楼梦》中的一个重要人物，她是贾府的家长，也是贾政的母亲。在文中，她已经八十多岁了，对家族中发生的不幸事件感到非常伤心和担忧。当听说家族可能受到惩罚时，她表示宁愿自己离去也不愿看到孩子们受苦。这体现了她对家庭成员深深的爱与关怀。\n\n参考文档：\n1. my_index/input/hongloumeng/《红楼梦》 第一百七回 散馀资贾母明大义　复世职政老沐天恩.txt\n2. my_index/input/hongloumeng/《红楼梦》 第一百六回 王熙凤致祸抱羞惭　贾太君祷天消祸患.txt\n3. my_index/input/hongloumeng/《红楼梦》 第二回 贾夫人仙逝扬州城　冷子兴演说荣国府.txt\n4. my_index/input/hongloumeng/《红楼梦》 第九十二回 评女传巧姐慕贤良　玩母珠贾政参聚散.txt\n",
     "status": "success"
   },
   {
-    "timestamp": "2025-03-07 10:42:32",
-    "prompt": "林黛玉是谁？",
-    "response": "林黛玉是《红楼梦》中的一个重要人物，她是以作者虚构的贾、史、王、薛四大家族之一——林家的女儿身份出现。在故事中，她是贾母去世多年的独生女贾敏与前宰相林如海之女，因此她的文学才华出众，情感细腻且具有极高的艺术造诣，在小说中以诗文才情著称，并和男主角贾宝玉有着复杂的情感关系。\n\n参考文档：\n1. my_index/input/hongloumeng/《红楼梦》 第十八回 皇恩重元妃省父母　天伦乐宝玉呈才藻.txt\n2. my_index/input/hongloumeng/《红楼梦》 第十九回 情切切良宵花解语　意绵绵静日玉生香.txt\n3. my_index/input/hongloumeng/《红楼梦》 第八十二回 老学究讲义警顽心　病潇湘痴魂惊恶梦.txt\n4. my_index/input/hongloumeng/《红楼梦》 第七十九回 薛文起悔娶河东吼　贾迎春误嫁中山狼.txt\n",
+    "timestamp": "2025-03-11 16:51:04",
+    "prompt": "{\r\n    \"prompt\": \"贾母是谁？你还记得我们上次谈话的内容吗？\"\r\n}",
+    "response": "贾母是《红楼梦》中的一个重要人物，她是贾府的家长，也是贾政的母亲。在文中，她已经八十多岁了，对家族中发生的不幸事件感到非常伤心和担忧。当听说家族可能受到惩罚时，她表示宁愿自己离去也不愿看到孩子们受苦。这体现了她对家庭成员深深的爱与关怀。\n\n参考文档：\n1. my_index/input/hongloumeng/《红楼梦》 第一百七回 散馀资贾母明大义　复世职政老沐天恩.txt\n2. my_index/input/hongloumeng/《红楼梦》 第一百六回 王熙凤致祸抱羞惭　贾太君祷天消祸患.txt\n3. my_index/input/hongloumeng/《红楼梦》 第二回 贾夫人仙逝扬州城　冷子兴演说荣国府.txt\n4. my_index/input/hongloumeng/《红楼梦》 第九十二回 评女传巧姐慕贤良　玩母珠贾政参聚散.txt\n",
     "status": "success"
   },
   {
-    "timestamp": "2025-03-07 10:42:51",
-    "prompt": "请基于以上历史对话记录，告诉我我们之前讨论的主要话题是什么？",
-    "response": "根据提供的文本内容，之前的讨论主要围绕着宝玉是否应该去参加老太太组织的消寒会、黛玉和宝钗对经济仕途的态度差异，以及关于贾府内部事务的一些议论。具体来说，涉及了宝玉不愿意听关于仕途经济的话题、探春处理家中查抄事件时表现出的强硬态度等内容。文本还提及了一些家族成员之间的日常互动和家庭管理的问题。\n\n参考文档：\n1. my_index/input/hongloumeng/《红楼梦》 第三十二回 诉肺腑心迷活宝玉　含耻辱情烈死金钏.txt\n2. my_index/input/hongloumeng/《红楼梦》 第九十二回 评女传巧姐慕贤良　玩母珠贾政参聚散.txt\n3. my_index/input/hongloumeng/《红楼梦》 第七十四回 惑奸谗抄检大观园　避嫌隙杜绝宁国府.txt\n4. my_index/input/hongloumeng/《红楼梦》 第六十四回 幽淑女悲题五美吟　浪荡子情遗九龙佩.txt\n",
+    "timestamp": "2025-03-12 09:00:10",
+    "prompt": "贾母是谁？",
+    "response": "贾母是《红楼梦》中的一个重要人物，她是贾家的家族长辈，也是贾宝玉的祖母。在你提供的内容中，当贾家遭遇困境时，贾母表现出了极大的悲伤与担忧，并对家族成员表达了她的关爱之情。她的健康状况引起了家人的关注，在她年迈之际依然为子孙们操心，体现了她作为家族长辈的责任感和慈爱之心。\n\n参考文档：\n1. my_index/input/hongloumeng/《红楼梦》 第一百七回 散馀资贾母明大义　复世职政老沐天恩.txt\n2. my_index/input/hongloumeng/《红楼梦》 第一百六回 王熙凤致祸抱羞惭　贾太君祷天消祸患.txt\n3. my_index/input/hongloumeng/《红楼梦》 第二回 贾夫人仙逝扬州城　冷子兴演说荣国府.txt\n4. my_index/input/hongloumeng/《红楼梦》 第九十二回 评女传巧姐慕贤良　玩母珠贾政参聚散.txt\n",
     "status": "success"
   },
   {
-    "timestamp": "2025-03-07 10:42:51",
-    "prompt": "我们之前在聊什么话题？",
-    "response": "根据提供的文本内容，之前的讨论主要围绕着宝玉是否应该去参加老太太组织的消寒会、黛玉和宝钗对经济仕途的态度差异，以及关于贾府内部事务的一些议论。具体来说，涉及了宝玉不愿意听关于仕途经济的话题、探春处理家中查抄事件时表现出的强硬态度等内容。文本还提及了一些家族成员之间的日常互动和家庭管理的问题。\n\n参考文档：\n1. my_index/input/hongloumeng/《红楼梦》 第三十二回 诉肺腑心迷活宝玉　含耻辱情烈死金钏.txt\n2. my_index/input/hongloumeng/《红楼梦》 第九十二回 评女传巧姐慕贤良　玩母珠贾政参聚散.txt\n3. my_index/input/hongloumeng/《红楼梦》 第七十四回 惑奸谗抄检大观园　避嫌隙杜绝宁国府.txt\n4. my_index/input/hongloumeng/《红楼梦》 第六十四回 幽淑女悲题五美吟　浪荡子情遗九龙佩.txt\n",
+    "timestamp": "2025-03-12 09:00:10",
+    "prompt": "{\r\n    \"prompt\": \"贾母是谁？你还记得我们上次谈话的内容吗？\"\r\n}",
+    "response": "贾母是《红楼梦》中的一个重要人物，她是贾家的家族长辈，也是贾宝玉的祖母。在你提供的内容中，当贾家遭遇困境时，贾母表现出了极大的悲伤与担忧，并对家族成员表达了她的关爱之情。她的健康状况引起了家人的关注，在她年迈之际依然为子孙们操心，体现了她作为家族长辈的责任感和慈爱之心。\n\n参考文档：\n1. my_index/input/hongloumeng/《红楼梦》 第一百七回 散馀资贾母明大义　复世职政老沐天恩.txt\n2. my_index/input/hongloumeng/《红楼梦》 第一百六回 王熙凤致祸抱羞惭　贾太君祷天消祸患.txt\n3. my_index/input/hongloumeng/《红楼梦》 第二回 贾夫人仙逝扬州城　冷子兴演说荣国府.txt\n4. my_index/input/hongloumeng/《红楼梦》 第九十二回 评女传巧姐慕贤良　玩母珠贾政参聚散.txt\n",
     "status": "success"
   },
   {
-    "timestamp": "2025-03-07 10:47:23",
-    "prompt": "你好",
-    "response": "根据上面的历史对话，我们之前讨论的主要人物是《红楼梦》中的贾母和林黛玉，并且涉及到了有关宝玉是否参加老太太组织的消寒会、林黛玉的性格特点以及她与男主角贾宝玉之间的复杂情感关系等话题。此外还提到了关于黛玉和宝钗对经济仕途态度的不同，以及一些关于家族内部事务的讨论。\n\n参考文档：\n1. my_index/input/hongloumeng/《红楼梦》 第五十四回 史太君破陈腐旧套　王熙凤效戏彩斑衣.txt\n2. my_index/input/hongloumeng/《红楼梦》 第七十九回 薛文起悔娶河东吼　贾迎春误嫁中山狼.txt\n3. my_index/input/hongloumeng/《红楼梦》 第十八回 皇恩重元妃省父母　天伦乐宝玉呈才藻.txt",
+    "timestamp": "2025-03-12 09:08:52",
+    "prompt": "贾母",
+    "response": "贾母是《红楼梦》中的重要人物之一，她是贾家的长辈，对家族事务有一定的影响力。在第一百七回中，她明智地分配了剩余的财产，显示了她的远见和公正；而在第三回里，当她接纳失去母亲的外孙女进入贾府时，展现了其慈爱的一面。这些描述共同塑造了一个既有权威又充满温情的人物形象。如果你需要更具体的信息，请告诉我！\n\n参考文档：\n1. my_index/input/hongloumeng/《红楼梦》 第一百七回 散馀资贾母明大义　复世职政老沐天恩.txt\n2. my_index/input/hongloumeng/《红楼梦》 第二回 贾夫人仙逝扬州城　冷子兴演说荣国府.txt\n3. my_index/input/hongloumeng/《红楼梦》 第三回 托内兄如海荐西宾　接外孙贾母惜孤女.txt\n4. my_index/input/hongloumeng/《红楼梦》 第九十二回 评女传巧姐慕贤良　玩母珠贾政参聚散.txt\n",
     "status": "success"
   },
   {
-    "timestamp": "2025-03-07 10:49:29",
-    "prompt": "你好",
-    "response": "您好！根据我们的上一次聊天记录，我们主要讨论了《红楼梦》中的林黛玉这一角色及其与贾宝玉之间的复杂情感关系。同时我们也提到一些关于该书中家族内部事务的细节。\n\n参考文档：\n1. my_index/input/hongloumeng/《红楼梦》 第十八回 皇恩重元妃省父母　天伦乐宝玉呈才藻.txt\n2. my_index/input/hongloumeng/《红楼梦》 第十九回 情切切良宵花解语　意绵绵静日玉生香.txt\n3. my_index/input/hongloumeng/《红楼梦》 第七十九回 薛文起悔娶河东吼　贾迎春误嫁中山狼.txt",
-    "status": "success"
-  },
-  {
-    "timestamp": "2025-03-07 10:50:39",
-    "prompt": "我今天向你问好了吗",
-    "response": "您好！从对话历史记录来看，在这次对话开始时您确实已经和我打了招呼，我们之间的对话是连贯且礼貌的。如果您有其他关于《红楼梦》的问题或者想要继续讨论之前的话题，请随时告诉我哦。",
+    "timestamp": "2025-03-12 09:08:52",
+    "prompt": "{\r\n    \"prompt\": \"贾母是谁？你还记得我们上次谈话的内容吗？\"\r\n}",
+    "response": "贾母是《红楼梦》中的重要人物之一，她是贾家的长辈，对家族事务有一定的影响力。在第一百七回中，她明智地分配了剩余的财产，显示了她的远见和公正；而在第三回里，当她接纳失去母亲的外孙女进入贾府时，展现了其慈爱的一面。这些描述共同塑造了一个既有权威又充满温情的人物形象。如果你需要更具体的信息，请告诉我！\n\n参考文档：\n1. my_index/input/hongloumeng/《红楼梦》 第一百七回 散馀资贾母明大义　复世职政老沐天恩.txt\n2. my_index/input/hongloumeng/《红楼梦》 第二回 贾夫人仙逝扬州城　冷子兴演说荣国府.txt\n3. my_index/input/hongloumeng/《红楼梦》 第三回 托内兄如海荐西宾　接外孙贾母惜孤女.txt\n4. my_index/input/hongloumeng/《红楼梦》 第九十二回 评女传巧姐慕贤良　玩母珠贾政参聚散.txt\n",
     "status": "success"
   }
 ]
